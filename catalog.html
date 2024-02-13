@@ -32,7 +32,7 @@
             </a>
           </li>
         </ul>
-        <button class="header-button">Хочу сюда!</button>
+        <button class="header-button" type="button">Хочу сюда!</button>
       </nav>
     </header>
     <main class="catalog-main">
@@ -78,19 +78,19 @@
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="hotel-label">
-                  <input class="hotel-input" type="radio" name="hotel" checked>
+                  <input class="hotel-input" type="radio" name="hotel" value="hotel" checked>
                   Гостиница
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="motel-label">
-                  <input class="motel-input" type="radio" name="motel">
+                  <input class="motel-input" type="radio" name="hotel" value="motel">
                   Мотель
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="apartments-label">
-                  <input class="apartments-input" type="radio" name="apartments">
+                  <input class="apartments-input" type="radio" name="hotel" value="apartments">
                   Апартаменты
                 </label>
               </li>
@@ -126,7 +126,7 @@
           </ul>
         </form>
       </section>
-      <section class="catalog-hostel">
+      <section class="catalog-cards">
         <h2 class="catalog-hostel-title">Найдено гостиниц: 38</h2>
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвые</option>
@@ -150,8 +150,6 @@
             </a>
           </li>
         </ul>
-      </section>
-      <secton class="catalog-cards">
         <h2 class="visually-hidden">Список найденных результатов</h2>
         <ul class="catalog-cards-list">
           <li class="catalog-cards-item">
@@ -165,7 +163,7 @@
             </div>
             <div class="catalog-cards-buttons">
               <a class="catalog-card-button button" href="#">Подробнее</a>
-              <button class="catalog-card-button button" type="submit">В избранное</a>
+              <button class="catalog-card-button button" type="button">В избранное</a>
             </div>
             <span class="catalog-cards-rating">Рейтинг: 8,5</span>
           </li>
@@ -180,7 +178,7 @@
             </div>
             <div class="catalog-cards-buttons">
               <a class="catalog-card-button button" href="#">Подробнее</a>
-              <button class="catalog-card-button button" type="submit">В избранном</a>
+              <button class="catalog-card-button button" type="button">В избранном</a>
             </div>
             <span class="catalog-cards-rating">Рейтинг: 9,2</span>
           </li>
@@ -195,7 +193,7 @@
             </div>
             <div class="catalog-cards-buttons">
               <a class="catalog-card-button button" href="#">Подробнее</a>
-              <button class="catalog-card-button button" type="submit">В избранное</a>
+              <button class="catalog-card-button button" type="button">В избранное</a>
             </div>
             <span class="catalog-cards-rating">Рейтинг: 6,9</span>
           </li>
@@ -210,13 +208,11 @@
             </div>
             <div class="catalog-cards-buttons">
               <a class="catalog-card-button button" href="#">Подробнее</a>
-              <button class="catalog-card-button button" type="submit">В избранное</a>
+              <button class="catalog-card-button button" type="button">В избранное</a>
             </div>
             <span class="catalog-cards-rating">Рейтинг: 5,0</span>
           </li>
         </ul>
-      </secton>
-      <section class="catalog-footer">
         <ul class="catalog-pagination">
           <li class="catalog-pagination-item">
             <a class="catalog-pagination-link pagination-current" href="#">1</a>
@@ -249,7 +245,7 @@
       </section>
     </main>
     <footer class="page-footer">
-        <address class="contacts-address">
+        <section class="contacts-address">
           <ul class="social-list">
             <li class="social-item">
               <a class="social-link" href="https://vk.com/htmlacademy">
@@ -267,11 +263,15 @@
               </a>
             </li>
           </ul>
+          </section>
+          <section class="contacts-number">
             <a class="contacts" href="tel:+78128121212">+7 (812) 812-12-12</a>
+          </section>
+          <section>
             <a class="autor-logo" href="https://htmlacademy.ru/">
               <img class="academy-logo" src="#" alt="Логотип разработчика сайта .html academy">
             </a>
-       </address>
+          </section>
     </footer>
   </body>
 </html>
