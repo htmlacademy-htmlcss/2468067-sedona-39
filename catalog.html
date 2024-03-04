@@ -10,7 +10,7 @@
   </head>
   <body>
     <header class="page-header">
-      <img class="logo" src="images/logo-sedona.png" width="140" height="70" alt="Логотип Седона">
+      <img class="logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип Седона">
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -39,19 +39,21 @@
         <button class="header-button" type="button">Хочу сюда!</button>
       </nav>
     </header>
-    <main class="catalog-main">
+    <main class="catalog-main catalog-container">
       <div class="catalog-main-header">
+        <div class="header-with-breadcrumbs">
         <h1 class="catalog-head-text">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">
-              <span classs="visually-hidden">На главную страницу</span>
+              <span class="visually-hidden">На главную страницу</span>
             </a>
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link">Гостиницы</a>
           </li>
         </ul>
+        </div>
         <section class="catalog-products">
           <h2 class="visually-hidden">Список услуг с фильтрами</h2>
           <form class="catalog-form">
@@ -104,15 +106,15 @@
             <fieldset class="price-filter">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <ul class="price-filter-list">
-                <span class="visually-hidden">Нижняя граница стоимости</span>
                 <li class="price-filter-item">
+                  <span class="visually-hidden">Нижняя граница стоимости</span>
                   <label class="price-filter-label">
                     <input class="price-filter-input" type="number" name="price-min" value="0" placeholder="0">
                     от
                   </label>
                 </li>
-                <span class="visually-hidden">Верхняя граница стоимости</span>
                 <li class="price-filter-item">
+                  <span class="visually-hidden">Верхняя граница стоимости</span>
                   <label class="price-filter-label">
                     <input class="price-filter-input" type="number" name="price-max" value="9000" placeholder="9000">
                     до
@@ -133,12 +135,15 @@
         </section>
       </div>
       <section class="catalog-cards">
+        <div class="catalog-cards-result">
         <h2 class="catalog-hostel-title">Найдено гостиниц: 38</h2>
+        <div class="select-control-container">
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensive">Сначала дорогие</option>
           <option value="popular">Сначала популярные</option>
         </select>
+        </div>
         <ul class="catalog-layout">
           <li class="catalog-layout-item">
             <a class="catalog-layout-button" href="#">
@@ -156,67 +161,80 @@
             </a>
           </li>
         </ul>
+        </div>
         <h2 class="visually-hidden">Список найденных результатов</h2>
         <ul class="catalog-cards-list">
           <li class="catalog-cards-item">
             <a class="catalog-cards-link" href="#">
               <img class="catalog-cards-img" src="images/images-hotel/hotel-1.jpg" width="300" height="212" alt="Звездное синее небо и каньон">
-              <h3 class="catalog-cards-title">Amara Resort & Spa</h3>
             </a>
+              <h3 class="catalog-cards-title">Amara Resort & Spa</h3>
             <div class="catalog-cards-details">
               <span class="catalog-cards-type">Гостиница</span>
               <span class="catalog-cards-price">От 4000 ₽</span>
             </div>
             <div class="catalog-cards-buttons">
               <a class="catalog-card-link" href="#">Подробнее</a>
-              <button class="catalog-card-link favorite" type="button">В избранное</a>
+              <button class="catalog-card-link favorite" type="button">В избранное</button>
             </div>
+            <div class="catalog-cards-rating-block">
+            <span class="catalog-cards-stars">Stars</span>
             <span class="catalog-cards-rating">Рейтинг: 8,5</span>
+            </div>
           </li>
           <li class="catalog-cards-item">
             <a class="catalog-cards-link" href="#">
               <img class="catalog-cards-img" src="images/images-hotel/hotel-2.jpg" width="300" height="212" alt="Каньон, облака и радуга">
-              <h3 class="catalog-cards-title">Villas at Poco Diablo</h3>
             </a>
+              <h3 class="catalog-cards-title">Villas at Poco Diablo</h3>
             <div class="catalog-cards-details">
               <span class="catalog-cards-type">Гостиница</span>
               <span class="catalog-cards-price">От 5000 ₽</span>
             </div>
             <div class="catalog-cards-buttons">
               <a class="catalog-card-link" href="#">Подробнее</a>
-              <button class="catalog-card-link selected" type="button">В избранном</a>
+              <button class="catalog-card-link selected" type="button">В избранном</button>
             </div>
+             <div class="catalog-cards-rating-block">
+            <span class="catalog-cards-stars">Stars</span>
             <span class="catalog-cards-rating">Рейтинг: 9,2</span>
+            </div>
           </li>
           <li class="catalog-cards-item">
             <a class="catalog-cards-link" href="#">
               <img class="catalog-cards-img" src="images/images-hotel/hotel-3.jpg" width="300" height="212" alt="Каньон и рассвет">
-              <h3 class="catalog-cards-title">Desert Quail Inn</h3>
             </a>
+              <h3 class="catalog-cards-title">Desert Quail Inn</h3>
             <div class="catalog-cards-details">
               <span class="catalog-cards-type">Гостиница</span>
               <span class="catalog-cards-price">От 2500 ₽</span>
             </div>
             <div class="catalog-cards-buttons">
               <a class="catalog-card-link" href="#">Подробнее</a>
-              <button class="catalog-card-link favorite" type="button">В избранное</a>
+              <button class="catalog-card-link favorite" type="button">В избранное</button>
             </div>
+             <div class="catalog-cards-rating-block">
+            <span class="catalog-cards-stars">Stars</span>
             <span class="catalog-cards-rating">Рейтинг: 6,9</span>
+            </div>
           </li>
           <li class="catalog-cards-item">
             <a class="catalog-cards-link" href="#">
               <img class="catalog-cards-img" src="images/images-hotel/hotel-4.jpg" width="300" height="212" alt="Звездное красное небо и каньон ">
-              <h3 class="catalog-cards-title">GreenTree Inn</h3>
             </a>
+              <h3 class="catalog-cards-title">GreenTree Inn</h3>
             <div class="catalog-cards-details">
               <span class="catalog-cards-type">Гостиница</span>
               <span class="catalog-cards-price">От 1500 ₽</span>
             </div>
             <div class="catalog-cards-buttons">
               <a class="catalog-card-link" href="#">Подробнее</a>
-              <button class="catalog-card-link favorite" type="button">В избранное</a>
+              <button class="catalog-card-link favorite" type="button">В избранное</button>
             </div>
+             <div class="catalog-cards-rating-block">
+            <span class="catalog-cards-stars">Stars</span>
             <span class="catalog-cards-rating">Рейтинг: 5,0</span>
+            </div>
           </li>
         </ul>
         <ul class="catalog-pagination">
@@ -251,7 +269,8 @@
       </section>
     </main>
     <footer class="page-footer">
-        <section class="contacts-address">
+      <div class="page-footer-container">
+        <div class="contacts-address">
           <ul class="social-list">
             <li class="social-item">
               <a class="social-link" href="https://vk.com/htmlacademy">
@@ -269,15 +288,16 @@
               </a>
             </li>
           </ul>
-          </section>
-          <section class="contacts-number">
+        </div>
+          <div class="contacts-number">
             <a class="contacts" href="tel:+78128121212">+7 (812) 812-12-12</a>
-          </section>
-          <section class="link-logo">
+          </div>
+          <div class="link-logo">
             <a class="autor-logo" href="https://htmlacademy.ru/">
               <img class="academy-logo" src="#" alt="Логотип разработчика сайта .html academy">
             </a>
-          </section>
+          </div>
+      </div>
     </footer>
   </body>
 </html>

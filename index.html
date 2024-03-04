@@ -10,7 +10,7 @@
   </head>
   <body>
     <header class="page-header">
-      <img class="logo" src="images/logo-sedona.png" width="140" height="70" alt="Логотип Седона">
+      <img class="logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип Седона">
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -39,19 +39,24 @@
         <button class="header-button" type="button">Хочу сюда!</button>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="main-container page-main">
+      <div class="page-container">
       <section class="main-title-page">
         <h1 class="visually-hidden">Сайт-путеводитель города Седона</h1>
-          <img class="main-title-logo" src="images/welcome-sedona.png" alt="Добро пожаловать в Седону">
+          <img class="main-title-logo" src="images/welcome-sedona.svg" alt="Добро пожаловать в Седону">
       </section>
       <section class="advantages">
+        <div class="header-of-advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <p class="main-text-bold">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="main-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        </div>
           <ul class="advantages-list">
             <li class="advantages-item-with-images">
+              <div class="advantages-title-general">
               <h3 class="advantages-title-with-images">Настоящий городок</h3>
               <p class="advantages-description-with-images">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
               <img class="advantages-image" src="images/advantages-photo-1.jpg" width="800" height="385" alt="Здания города Седона, горы и деревья">
             </li>
             <li class="advantages-item-odd">
@@ -66,9 +71,11 @@
               <h3 class="advantages-title-center">Мало туристов</h3>
               <p class="advantages-description-center">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
-            <li class="advantages-item-with-images">
+            <li class="advantages-item-with-images devil-reverse">
+              <div class="advantages-title-general">
               <h3 class="advantages-title-with-images">Там есть мост Дьявола</h3>
               <p class="advantages-description-with-images">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              </div>
               <img class="advantages-image" src="images/advantages-photo-2.jpg" width="800" height="385" alt="Каньон мост Дьявола">
             </li>
           </ul>
@@ -108,9 +115,11 @@
               <button class="subscribe-button" type="submit">Подписаться</button>
           </form>
       </section>
+    </div>
     </main>
     <footer class="page-footer">
-        <section class="contacts-address">
+      <div class="page-footer-container">
+        <div class="contacts-address">
           <ul class="social-list">
             <li class="social-item">
               <a class="social-link" href="https://vk.com/htmlacademy">
@@ -128,15 +137,16 @@
               </a>
             </li>
           </ul>
-          </section>
-          <section class="contacts-number">
+        </div>
+          <div class="contacts-number">
             <a class="contacts" href="tel:+78128121212">+7 (812) 812-12-12</a>
-          </section>
-          <section class="link-logo">
+          </div>
+          <div class="link-logo">
             <a class="autor-logo" href="https://htmlacademy.ru/">
               <img class="academy-logo" src="#" alt="Логотип разработчика сайта .html academy">
             </a>
-          </section>
+          </div>
+      </div>
     </footer>
   </body>
 </html>
