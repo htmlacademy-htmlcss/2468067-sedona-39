@@ -144,13 +144,15 @@
         </div>
       </section>
       <section class="subscribe">
-        <h3 class="subscribe-text-bold">Подпишись на рассылку</h3>
-        <p class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <div class="header-of-subscribe">
+        <h3 class="subscribe-text-bold">Подпишитесь на рассылку</h3>
+        <p class="subscribe-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form class="subscribe-form" action="#" method="post">
             <label class="visually-hidden" for="subscribe-email">Укажите ваш e-mail</label>
               <input class="subscribe-email" type="text" id="subscribe-email" name="user-email" placeholder="Ваш e-mail">
               <button class="subscribe-button" type="submit">Подписаться</button>
           </form>
+        </div>
       </section>
     </div>
     </main>
@@ -206,6 +208,40 @@
         </a>
       </div>
     </footer>
+  </div>
+  <div class="modal-container">
+    <div class="modal modal-filter">
+        <section class="modal-content">
+          <h2 class="modal-title">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</h2>
+           <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        </section>
+        <div class="filters-for-hotel">
+          <form class="filter-form" action="#" method="post">
+            <p class="field-group">
+              <label class="" for="filter-data-arrival">Дата Заезда:</label>
+              <input class="filter-form-field field" type="date" id="filter-data-arrival" name="filter-data-arrival" placeholder="27 апреля 2020">
+            </p>
+            <p class="field-group">
+              <label class="" for="filter-data-departure">Дата Выезда:</label>
+              <input class="filter-form-field field" type="date" id="filter-data-departure" name="filter-data-departure" placeholder="1 сентября 2023">
+            </p>
+          <div class="filters-people">
+            <p class="field-group">
+              <label class="" for="filter-people-adult">Взрослые:</label>
+              <input class="filter-form-field field" type="number" id="filter-people-adult" name="filter-people-adult" placeholder="2">
+            </p>
+            <p class="field-group">
+              <label class="" for="filter-people-children">Дети:</label>
+              <input class="filter-form-field field" type="number" id="filter-people-children" name="filter-people-children" placeholder="2">
+            </p>
+          </div>
+          <button class="filter-form-button" type="submit">НАЙТИ</button>
+          </form>
+        </div>
+    </div>
+
   </div>
   </body>
 </html>

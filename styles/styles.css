@@ -62,6 +62,8 @@ body {
 .page-header {
   display: flex;
   padding: 0 70px;
+  position: relative;
+  z-index: 10;
 }
 
 .navigation {
@@ -115,10 +117,6 @@ body {
   column-gap: 3px;
 }
 
-/* .navigation-item {
-  list-style: none;
-} */
-
 .navigation-link {
   display: flex;
   justify-content: center;
@@ -128,8 +126,15 @@ body {
   font-size: 20px;
   text-decoration: none;
   color: inherit;
-  background-color: #ffffff;
   font-weight: 700;
+}
+
+.navigation-link svg:hover, .navigation-link svg:focus {
+  fill: #756157;
+}
+
+.navigation-link svg:active {
+  fill: rgba(117, 97, 87, 0.30);
 }
 
 .counter-link {
@@ -201,6 +206,7 @@ body {
   background-image: url("../images/background-header.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #756157;
 
 }
 
@@ -214,7 +220,7 @@ body {
 .main-title-logo {
   display: block;
   margin: 0 auto;
-  padding: 50px 0 80px 0;
+  padding: 50px 0 83px 0;
 }
 
 .main-text-bold {
@@ -304,7 +310,7 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   margin: 0;
-  margin-bottom: 61px;
+  margin-bottom: 29px;
 }
 
 .advantages-description-with-images {
@@ -344,7 +350,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 64px;
+  margin-bottom: 29px;
 }
 
 .advantages-description-center {
@@ -403,12 +409,16 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   font-weight: 700;
+  margin: 0;
+  margin-top: 23px;
+  margin-bottom: 32px;
 }
 
 .services-description {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  margin: 0;
 }
 
 .search {
@@ -416,7 +426,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 400px;
+  padding: 78px 20px 95px;
 }
 
 .header-of-search {
@@ -425,8 +435,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1200px;
-  height: 406px;
 }
 
 .search-link-hotel {
@@ -466,7 +474,6 @@ body {
   background-color: #E5E5E5;
 }
 
-/* для плашки белой куда пишешь mail - padding */
 .subscribe {
   display: flex;
   flex-direction: column;
@@ -475,8 +482,18 @@ body {
   background-image: url("../images/background-mailing.jpg");
   background-size: cover;
   text-align: center;
-  height: 400px;
+  height: 414px;
   box-sizing: border-box;
+  padding: 115px 20px 130px;
+  color: #ffffff;
+}
+
+.header-of-subscribe {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .subscribe-text-bold {
@@ -484,16 +501,14 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 36px;
-  color: #ffffff;
   margin: 0;
 }
 
 .subscribe-text {
   font-size: 22px;
   line-height: 26px;
-  color: #ffffff;
-  padding: 20px 362px 54px 362px;
   margin: 0;
+  margin-bottom: 24px;
 }
 
 .subscribe-form {
@@ -506,7 +521,7 @@ body {
   line-height: 24px;
   color: #000000;
   background-color: #f2f2f2;
-  width: 452px;
+  width: 432px;
   height: 52px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -550,25 +565,17 @@ body {
 
 .page-footer {
   display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
-  height: 80px;
+  align-items: center;
+  padding: 40px 70px 30px;
 }
 
 .social-list {
   display: flex;
   margin: 0;
   padding: 0;
-  width: 142px;
-  height: 40px;
-  margin-left: 70px;
-}
-
-.social-item {
-  width: 56px;
-  height: 44px;
-  margin-top: 15px;
   list-style: none;
+  width: 142px;
+  flex-wrap: wrap;
 }
 
 .social-item:nth-child(3n) {
@@ -579,7 +586,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 48px;
+  width: 45px;
   height: 40px;
 }
 
@@ -592,11 +599,7 @@ body {
 }
 
 .contacts-number {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 720px;
-  height: 50px;
+  margin-left: auto;
 }
 
 .contacts {
@@ -605,6 +608,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
+  padding: 0 10px;
 }
 
 .contacts:hover, .contacts:focus {
@@ -616,10 +620,7 @@ body {
 }
 
 .link-logo {
-  width: 130px;
-  height: 40px;
-  margin-top: 10px;
-  margin-right: 70px;
+  margin-left: auto;
 }
 
 .author-logo svg:hover, .author-logo svg:focus {
@@ -628,6 +629,64 @@ body {
 
 .author-logo svg:active {
   fill: rgba(117, 97, 87, 0.30);
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.modal-filter {
+  width: 717px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  right: 0;
+  width: 52px;
+  height: 52px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 100%;
+  background-image: url("../images/icon/modal-icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* закрывает модальное окно, добавить в modal-container по окончанию */
+.modal-container-close {
+  display: none;
+}
+
+.filter-form .field-group {
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 .catalog-main-header {
@@ -763,45 +822,37 @@ fieldset {
 
 .catalog-cards-result {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 1060px;
-  margin-top: 50px;
+  margin: 0 auto;
+  margin-bottom: 39px;
+  padding: 0 70px;
+  padding-top: 51px;
 }
 
 .catalog-hostel-title {
   font-size: 30px;
+  width: 400px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .catalog-layout {
   display: flex;
-  margin-left: 70px;
 }
 
 .catalog-layout-item {
   list-style: none;
 }
 
-/* .catalog-layout-button {
-  background-image: url("../images/icon/view-1.svg");
-  color: inherit;
-  outline: red;
-} */
-
 .catalog-layout-icon {
   outline: black;
 }
 
-.select-control-container {
-  display: flex;
-  justify-content: center;
-}
-
 .select-control {
-  margin-left: 200px;
-  width: 290px;
-  height: 50px;
+  width: 292px;
+  height: 49px;
   color: #333333;
 }
 
@@ -1008,4 +1059,9 @@ fieldset {
 
 .ellipsis:hover, .ellipsis:focus, .ellipsis:active, .ellipsis:disabled {
   background-color: transparent;
+}
+
+.subscribe-background-none {
+  background-image: none;
+  color: #000000;
 }
