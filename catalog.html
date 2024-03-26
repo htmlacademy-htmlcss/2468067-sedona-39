@@ -23,7 +23,7 @@
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link navigation-link-current active-item" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
@@ -74,20 +74,20 @@
               <legend class="catalog-filter-title">Инфраструктура:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
-                  <label class="swimming-pool-label">
-                    <input class="swimming-pool-input" type="checkbox" name="swimming-pool" checked>
+                    <input class="swimming-pool-input visually-hidden checkbox-input" type="checkbox" id="swimming-pool" name="swimming-pool" checked>
+                  <label class="filter-label checkbox-label" for="swimming-pool">
                     Бассейн
                   </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <label class="parking-label">
-                    <input class="parking-input" type="checkbox" name="parking" checked>
+                    <input class="parking-input visually-hidden checkbox-input" type="checkbox" id="parking" name="parking" checked>
+                  <label class="filter-label checkbox-label" for="parking">
                     Парковка
                   </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <label class="wi-fi-label">
-                    <input class="wi-fi-input" type="checkbox" name="wi-fi">
+                    <input class="wi-fi-input visually-hidden checkbox-input" type="checkbox" id="wi-fi" name="wi-fi" checked>
+                  <label class="filter-label checkbox-label" for="wi-fi">
                     Wi-Fi
                   </label>
                 </li>
@@ -372,7 +372,7 @@
           <div class="link-logo">
             <a class="author-logo" href="https://htmlacademy.ru/">
               <svg class="academy-logo" width="115" height="34" viewBox="0 0 115 34" fill="black" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" fill="black"/>
+                <path d="M0 13.2564V15.8564H2.5V13.2564H0Z"/>
                 <path d="M11.6 4.85645C10 4.85645 8.8 5.55645 8 6.55645H7.9V0.356445H5.9V15.8564H7.9V10.5564C7.9 8.45645 9.2 6.95645 11.2 6.95645C13 6.95645 14.1 8.35645 14.1 10.1564V15.8564H16.1V9.75644C16.2 6.75644 14.3 4.85645 11.6 4.85645Z"/>
                 <path d="M26.6 5.15645H21.8V1.45645H19.8V5.25645H17.9V7.25645H19.8V13.2564C19.8 14.9564 20.8 15.9564 22.5 15.9564H26.6V13.9564H22.9C22.2 13.9564 21.8 13.5564 21.8 12.8564V7.15645H26.6V5.15645Z"/>
                 <path d="M41.1 4.95645C39.5 4.95645 38.2 5.75644 37.6 7.05645H37.5C36.9 5.85645 35.7 4.95645 34.1 4.95645C32.7 4.95645 31.6 5.75645 31 6.75645H30.9V5.15645H29V15.7564H31V10.3564C31 8.35645 32 6.85645 33.6 6.85645C35.1 6.85645 36 7.85645 36 9.45645V15.7564H38V10.1564C38 7.75645 39.4 6.85645 40.6 6.85645C42.1 6.85645 43 7.85645 43 9.45645V15.7564H45V9.25644C45.1 6.75644 43.6 4.95645 41.1 4.95645Z"/>
