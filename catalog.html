@@ -10,7 +10,7 @@
   </head>
   <body>
   <div class="wrapper">
-    <header class="page-header">
+    <header class="page-header" data-test="header">
       <a class="navigation-logo" href="./index.html">
       <img class="logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип Седона">
       </a>
@@ -48,7 +48,7 @@
         <button class="header-button" type="button">Хочу сюда!</button>
       </nav>
     </header>
-    <main class="catalog-main catalog-container">
+    <main class="catalog-main catalog-container" data-test="main">
       <div class="catalog-main-header">
         <div class="header-with-breadcrumbs">
         <h1 class="catalog-head-text">Гостиницы Седоны</h1>
@@ -67,7 +67,7 @@
           </li>
         </ul>
         </div>
-        <section class="catalog-products">
+        <section class="catalog-products" data-test="filter">
           <h2 class="visually-hidden">Список услуг с фильтрами</h2>
           <form class="catalog-form">
             <fieldset class="catalog-filter-group">
@@ -97,20 +97,20 @@
               <legend class="catalog-filter-title">Тип Жилья:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
-                  <label class="hotel-label">
-                    <input class="hotel-input" type="radio" name="hotel" value="hotel" checked>
+                  <input class="hotel-input visually-hidden radio-input" type="radio" name="hotel" id="hotel" value="hotel" checked>
+                  <label class="filter-label radio-label" for="hotel">
                     Гостиница
                   </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <label class="motel-label">
-                    <input class="motel-input" type="radio" name="hotel" value="motel">
+                  <input class="motel-input visually-hidden radio-input" type="radio" name="hotel" id="motel" value="motel">
+                  <label class="filter-label radio-label" for="motel">
                     Мотель
                   </label>
                 </li>
                 <li class="catalog-filter-item">
-                  <label class="apartments-label">
-                    <input class="apartments-input" type="radio" name="hotel" value="apartments">
+                  <input class="apartments-input visually-hidden radio-input" type="radio" name="hotel" id="apartments" value="apartments">
+                  <label class="filter-label radio-label" for="apartments">
                     Апартаменты
                   </label>
                 </li>
@@ -121,20 +121,29 @@
               <ul class="price-filter-list">
                 <li class="price-filter-item">
                   <span class="visually-hidden">Нижняя граница стоимости</span>
-                  <label class="price-filter-label">
-                    <input class="price-filter-input" type="number" name="price-min" value="0" placeholder="0">
+                  <label class="price-filter-label" for="price-min">
                     от
                   </label>
+                    <input class="price-filter-input input-number-arrow-remove" type="number" name="price-min" id="price-min" value="0" placeholder="0">
                 </li>
                 <li class="price-filter-item">
                   <span class="visually-hidden">Верхняя граница стоимости</span>
-                  <label class="price-filter-label">
-                    <input class="price-filter-input" type="number" name="price-max" value="9000" placeholder="9000">
-                    до
+                  <label class="price-filter-label" for="price-max">
+                     до
                   </label>
+                    <input class="price-filter-input input-number-arrow-remove" type="number" name="price-max" id="price-max" value="9000" placeholder="9000">
                 </li>
               </ul>
-              <input class="price-filter-range" type="range">
+              <div class="filter-price-range">
+                  <div class="filter-price-range-main-bar">
+                    <div class="filter-price-range-bar" style="width: 226px; left: 0;">
+                      <button class="filter-price-range-pin filter-price-range-pin--min button-reset" type="button"
+                        style="left: 0;"></button>
+                      <button class="filter-price-range-pin filter-price-range-pin--max button-reset" type="button"
+                        style="right: 0;"></button>
+                    </div>
+                  </div>
+                </div>
             </fieldset>
             <ul class="buttons-filter">
               <li class="buttons-filter-item">
@@ -147,16 +156,33 @@
           </form>
         </section>
       </div>
-      <section class="catalog-cards">
+      <section class="catalog-cards" data-test="catalog">
         <div class="catalog-cards-result">
         <h2 class="catalog-hostel-title">Найдено гостиниц: 38</h2>
         <div class="select-control-container">
         <select class="select-control" aria-label="Сортировка">
-          <option value="cheap">Сначала дешёвые</option>
-          <option value="expensive">Сначала дорогие</option>
-          <option value="popular">Сначала популярные</option>
+          <option class="select-control-option" value="cheap">Сначала дешёвые</option>
+          <option class="select-control-option" value="expensive">Сначала дорогие</option>
+          <option class="select-control-option" value="popular">Сначала популярные</option>
         </select>
         </div>
+        <!-- <ul class="catalog-layout list-reset">
+          <li class="catalog-layout-item">
+            <a class="catalog-layout-button catalog-layout-button--cards catalog-layout-button--active link-reset" href="#">
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+          </li>
+          <li class="catalog-layout-item">
+            <a class="catalog-layout-button catalog-layout-button--detailed link-reset" href="#">
+              <span class="visually-hidden">Показать подробно карточку</span>
+            </a>
+          </li>
+          <li class="catalog-layout-item">
+            <a class="catalog-layout-button catalog-layout-button--list link-reset" href="#">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+          </li>
+        </ul> -->
         <ul class="catalog-layout">
           <li class="catalog-layout-item">
             <a class="catalog-layout-button" href="#">
@@ -325,7 +351,7 @@
           </li>
         </ul>
       </section>
-      <section class="subscribe subscribe-background-none">
+      <section class="subscribe subscribe-background-none" data-test="subscribe">
         <div class="header-of-subscribe">
         <h3 class="subscribe-text-bold">Подпишитесь на рассылку</h3>
         <p class="subscribe-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
@@ -337,7 +363,7 @@
         </div>
       </section>
     </main>
-     <footer class="page-footer">
+     <footer class="page-footer" data-test="footer">
         <div class="contacts-address">
           <ul class="social-list">
             <li class="social-item">
