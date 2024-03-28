@@ -1,8 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Diana Vashakidze](https://up.htmlacademy.ru/htmlcss/39/user/2468067).
-* Наставник: `Неизвестно`.
-
+* Наставник: [Олег Зайцев](https://htmlacademy.ru/profile/ozi).
+* Сайт: [Мой сайт](https://dianamoooon.github.io/2468067-sedona-39/)
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
